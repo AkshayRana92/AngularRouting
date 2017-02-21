@@ -1,30 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { Router } from '@angular/router';
 import {Intern} from "./intern";
 import {AppService} from "./app.service";
 
 @Component({
+  moduleId: module.id,
   selector: 'my-app',
-  templateUrl: './app/app.component.html',
-  providers : [AppService]
+  templateUrl: 'app.component.html',
 })
-export class AppComponent implements OnInit{
-  name = 'Angular';
-  color: string = 'red';
-  intern: Intern = new Intern();
-  myInterns: Intern[];
+export class AppComponent{
 
-  constructor(private service: AppService) {}
+  constructor(private router: Router) {
 
-  ngOnInit() {
-    this.myInterns = this.service.interns;
   }
 
-  clickMe(param: string) {
-    alert(param)
+  goToCreateTask() {
+    this.router.navigate(['create'])
   }
 
-  submit() {
-    alert(JSON.stringify(this.intern.id))
+  goToListTasks() {
+    this.router.navigate(['list'])
   }
 
 }

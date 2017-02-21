@@ -1,19 +1,12 @@
 import {Routes} from '@angular/router'
-import {HomeComponent} from "./home/home.component";
-import {LoginComponent} from "./login/login.component";
+import {CreateTaskComponent} from "./create-task/create-task.component";
+import {ListTaskComponent} from "./list-task/list-task.component";
 
 export const routes: Routes = [{
-  path : 'home',
-  component: HomeComponent
+  path : 'create',
+  component: CreateTaskComponent
 },{
-  path : 'login',
-  component: LoginComponent
-},{
-  path : 'details/:id',
-  component: LoginComponent
-},{
-  path : '',
-  redirectTo: '/home',
-  pathMatch: 'full'
+  path : 'list',
+  component: ListTaskComponent
 }];
 

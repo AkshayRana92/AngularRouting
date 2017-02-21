@@ -1,0 +1,10 @@
+<form (ngSubmit) = "submit()">
+
+    <input type="text" placeholder="Enter Date" [(ngModel)]="task.date" name="date" required #date="ngModel"><br>
+    <input type="text" placeholder="Enter Title" [(ngModel)]="task.title" name="title" required #title="ngModel"><br>
+    <input type="text" placeholder="Enter Description" [(ngModel)]="task.description" name="description" required #description="ngModel"><br>
+    <input type="text" placeholder="Enter Priority" [(ngModel)]="task.priority" name="priority" required #priority="ngModel"><br>
+
+    <button type="submit">Submit</button><br>
+
+</form>
